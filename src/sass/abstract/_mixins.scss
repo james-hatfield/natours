@@ -5,3 +5,11 @@
     clear: both;
   }
 }
+
+@mixin linearGradient($color1, $color2, $opacity) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color1, $opacity),
+    rgba($color2, $opacity)
+  );
+}

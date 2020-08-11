@@ -1,0 +1,178 @@
+@import "../../theme.scss";
+
+$card-height: 52rem;
+
+.Card {
+  perspective: 150rem;
+  --moz-perspective: 150rem;
+  position: relative;
+  height: $card-height;
+
+  .CardSide {
+    background-color: #e30;
+    height: $card-height;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: $deep-box-shadow;
+  }
+
+  .Front {
+    background-color: $color-white;
+    position: relative;
+
+    .CardImage {
+      background-size: cover;
+      height: 23rem;
+      background-blend-mode: soft-light;
+      --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+      &.Image1 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url(../../assets/nat-5.jpg);
+        + h4 {
+          span {
+            @include linearGradient(
+              $color-primary-light,
+              $color-primary-dark,
+              0.85
+            );
+          }
+        }
+      }
+
+      &.Image2 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          ),
+          url(../../assets/nat-6.jpg);
+        + h4 {
+          span {
+            @include linearGradient(
+              $color-secondary-light,
+              $color-secondary-dark,
+              0.85
+            );
+          }
+        }
+      }
+
+      &.Image3 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url(../../assets/nat-7.jpg);
+        + h4 {
+          span {
+            @include linearGradient(
+              $color-tertiary-light,
+              $color-tertiary-dark,
+              0.85
+            );
+          }
+        }
+      }
+    }
+
+    .CardHeading {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-white;
+      text-align: right;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      width: 75%;
+
+      span {
+        padding: 1rem 1.5rem;
+        --webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
+    }
+
+    .CardDetails {
+      padding: 3rem;
+      ul {
+        width: 80%;
+        list-style: none;
+        text-transform: uppercase;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 1rem;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-light-2;
+          }
+        }
+      }
+    }
+  }
+
+  .Back {
+    transform: rotateY(-180deg);
+
+    .CallToAction {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+    }
+
+    .Price {
+      text-align: center;
+      margin-bottom: 8rem;
+      color: $color-white;
+
+      .Only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      .PriceValue {
+        font-size: 6rem;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .Primary {
+    @include linearGradient($color-primary-light, $color-primary-dark, 1);
+  }
+
+  .Secondary {
+    @include linearGradient($color-secondary-light, $color-secondary-dark, 1);
+  }
+
+  .Tertiary {
+    @include linearGradient($color-tertiary-light, $color-tertiary-dark, 1);
+  }
+
+  &:hover .Front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .Back {
+    transform: rotateY(0);
+  }
+}

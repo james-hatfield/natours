@@ -7,14 +7,34 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../../assets/hero.jpg);
+    url(../../assets/nat-4.jpg);
+  background-position: top;
   background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
 }
 
 .FeatureBox {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: $deep-box-shadow;
+  transition: transform 0.2s;
+
+  cursor: pointer;
+
   .Icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
   }
 
-  .Text {
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
   }
 }
