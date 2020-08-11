@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header/Header";
-// import classes from "./App.module.scss";
 import About from "./components/About/About";
+import Features from "./components/Features/Features";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Header></Header>
       <main>
         <About></About>
+        <Features></Features>
       </main>
     </>
   );
