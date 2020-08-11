@@ -1,0 +1,73 @@
+@import "../../theme.scss";
+
+.Header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../../assets/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  .LogoBox {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    .Logo {
+      height: 3.5rem;
+    }
+  }
+}
+
+.TextBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.HeadingPrimary {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+
+  animation: moveInLeft ease-out 1s;
+}
+.HeadingSecondary {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  margin-bottom: 2rem;
+
+  animation: moveInRight ease-out 1s;
+}
+
+.BtnWhite {
+  background-color: $color-white;
+  color: $color-dark-grey;
+
+  &::after {
+    background-color: $color-white;
+  }
+}
+
+.BtnAnimated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
