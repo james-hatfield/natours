@@ -1,13 +1,6 @@
 import React from "react";
 import classes from "./Card.module.scss";
-
-export interface ICard {
-  color: "Primary" | "Secondary" | "Tertiary";
-  image: "Image1" | "Image2" | "Image3";
-  heading: string;
-  details: string[];
-  price: number;
-}
+import { ICard } from "../../App.types";
 
 const Card = (props: ICard) => {
   const details = props.details.map((d, i) => <li key={i}>{d}</li>);

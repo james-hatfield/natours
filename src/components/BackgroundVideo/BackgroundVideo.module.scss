@@ -1,0 +1,15 @@
+.VideoContainer {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: -1;
+  .Video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

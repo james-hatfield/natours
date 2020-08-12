@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Tours.module.scss";
 import Card from "../Card/Card";
-import { cards } from "./TourCards";
+import { cards } from "../../App.data";
 
 const Tours = () => (
   <section className={classes.Tours}>
@@ -9,15 +9,11 @@ const Tours = () => (
       <h2 className={classes.Heading}>Most popular tours</h2>
     </div>
     <div className={classes.Row}>
-      <div className={classes.Col1of3}>
-        <Card {...cards[0]}></Card>
-      </div>
-      <div className={classes.Col1of3}>
-        <Card {...cards[1]}></Card>
-      </div>
-      <div className={classes.Col1of3}>
-        <Card {...cards[2]}></Card>
-      </div>
+      {cards.map((c, i) => (
+        <div key={i} className={classes.Col1of3}>
+          <Card {...c}></Card>
+        </div>
+      ))}
     </div>
     <div className={`${classes.CenterText} ${classes.MarginTopHuge}`}>
       <button className={`${classes.Btn} ${classes.BtnGreen}`}>
