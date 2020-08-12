@@ -4,16 +4,18 @@ import About from "./components/About/About";
 import Features from "./components/Features/Features";
 import Tours from "./components/Tours/Tours";
 import Stories from "./components/Stories/Stories";
+import Booking from "./components/Booking/Booking";
 
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <main>
-        <About></About>
-        <Features></Features>
-        <Tours></Tours>
-        <Stories></Stories>
+        <About />
+        <Features />
+        <Tours />
+        <Stories />
+        <Booking />
       </main>
     </>
   );
