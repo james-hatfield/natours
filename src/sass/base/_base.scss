@@ -7,7 +7,17 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // Defines 1rem to be 10px
+
+  @include breakpoints(tab-land) {
+    font-size: 56.25%; // 1rem = 9px;
+  }
+  @include breakpoints(tab-port) {
+    font-size: 50%; // 1rem = 8px;
+  }
+  @include breakpoints(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
 }
 
 body {
@@ -22,4 +32,8 @@ body {
   color: $color-dark-grey-1;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include breakpoints(tab-port) {
+    padding: 0;
+  }
 }

@@ -20,3 +20,37 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// breakpoints
+/*
+  0 - 600px:        Phone
+  600 - 900px:      Tablet Portrait
+  900 - 1200px:     Tablet Landscape
+  [1200 - 1800]px:  Normal Styles
+  1800px + :        Large Desktops
+
+  1em = 16px
+*/
+@mixin breakpoints($size) {
+  // 600px
+  @if $size == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+    //900px
+  } @else if $size == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+    //1200px
+  } @else if $size == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+    //1800px
+  } @else if $size == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

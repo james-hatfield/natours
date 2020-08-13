@@ -3,6 +3,10 @@
 .Stories {
   position: relative;
   padding: 15rem 0;
+
+  @include breakpoints(tab-port) {
+    padding: 0 0;
+  }
 }
 
 .Story {
@@ -17,6 +21,16 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include breakpoints(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include breakpoints(phone) {
+    transform: translateX(-3rem) skew(0);
+  }
+
   .Shape {
     width: 15rem;
     height: 15rem;
@@ -28,6 +42,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
 
+    @include breakpoints(phone) {
+      transform: translateX(-3rem) skew(0);
+    }
+
     img {
       height: 100%;
       transform: translateX(-4rem) scale(1.4);
@@ -37,6 +55,9 @@
 
   .StoryText {
     transform: skewX(12deg);
+    @include breakpoints(phone) {
+      transform: skew(0);
+    }
   }
 
   .Caption {

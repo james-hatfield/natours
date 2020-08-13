@@ -5,9 +5,17 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include breakpoints(tab-port) {
+    padding: 8rem 0;
+  }
+
   .LogoBox {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include breakpoints(phone) {
+      margin-bottom: 6rem;
+    }
 
     .Logo {
       width: 15rem;
@@ -51,6 +59,11 @@
     border-top: 1px solid $color-grey-light-2;
     padding-top: 2rem;
     display: inline-block;
+
+    @include breakpoints(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .Copyright {
@@ -58,5 +71,11 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include breakpoints(phone) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
   }
 }

@@ -25,6 +25,16 @@
     &:hover > .NavIcon::after {
       top: 1rem;
     }
+
+    @include breakpoints(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include breakpoints(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   .Background {
@@ -40,6 +50,16 @@
       $color-primary-dark
     );
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include breakpoints(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include breakpoints(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   .Nav {

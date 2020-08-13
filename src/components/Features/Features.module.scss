@@ -16,6 +16,11 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include breakpoints(tab-port) {
+    padding: 10rem 0;
+    position: relative;
+  }
 }
 
 .FeatureBox {
@@ -26,12 +31,21 @@
   border-radius: 3px;
   box-shadow: $deep-box-shadow;
   transition: transform 0.2s;
-
   cursor: pointer;
+
+  @include breakpoints(tab-port) {
+    padding: 2rem;
+    width: 75%;
+    margin-left: 4rem;
+  }
 
   .Icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
+
+    @include breakpoints(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
