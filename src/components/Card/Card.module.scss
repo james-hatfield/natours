@@ -131,10 +131,7 @@ $card-height: 52rem;
     transform: rotateY(-180deg);
 
     .CallToAction {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include absoluteCenter();
       width: 90%;
       text-align: center;
     }

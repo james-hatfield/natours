@@ -11,7 +11,7 @@ const Header = () => (
       />
     </div>
     <div className={classes.TextBox}>
-      <h1 className={classes.Heading}>
+      <h1 className={classes.HeaderHeading}>
         <span className={classes.HeadingPrimary}>Outdoors </span>
         <span className={classes.HeadingSecondary}>Is where life happens</span>
       </h1>
