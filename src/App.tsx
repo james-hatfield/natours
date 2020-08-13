@@ -7,10 +7,12 @@ import Stories from "./components/Stories/Stories";
 import Booking from "./components/Booking/Booking";
 import Footer from "./components/Footer/Footer";
 import Navigation from "./components/Navigation/Navigation";
+import BookingModal from "./components/Booking/BookingModal/BookingModal";
 
 function App() {
   return (
     <>
+      <BookingModal />
       <Navigation></Navigation>
       <Header />
       <main>

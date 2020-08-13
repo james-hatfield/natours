@@ -25,7 +25,9 @@ const Card = (props: ICard) => {
             <p className={classes.Only}>Only</p>
             <p className={classes.PriceValue}>${props.price}</p>
           </div>
-          <button className={classes.Btn}>Book Now!</button>
+          <a href="#popup" className={`${classes.Btn} ${classes.BtnWhite}`}>
+            Book Now!
+          </a>
         </div>
       </div>
     </div>
