@@ -29,16 +29,22 @@ const About = () => (
         <div className={classes.Composition}>
           <img
             className={`${classes.CompositionPhoto} ${classes.Ph1}`}
+            srcSet={`${require("../../assets/nat-1.jpg")} 300w,${require("../../assets/nat-1-large.jpg")} 1000w`}
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
             src={require("../../assets/nat-1-large.jpg")}
             alt="Nature 1"
           />
           <img
             className={`${classes.CompositionPhoto} ${classes.Ph2}`}
+            srcSet={`${require("../../assets/nat-2.jpg")} 300w,${require("../../assets/nat-2-large.jpg")} 1000w`}
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
             src={require("../../assets/nat-2-large.jpg")}
             alt="Nature 2"
           />
           <img
             className={`${classes.CompositionPhoto} ${classes.Ph3}`}
+            srcSet={`${require("../../assets/nat-3.jpg")} 300w,${require("../../assets/nat-3-large.jpg")} 1000w`}
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
             src={require("../../assets/nat-3-large.jpg")}
             alt="Nature 3"
           />

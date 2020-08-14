@@ -25,6 +25,12 @@
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
+    &:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+  }
+  @include breakpoints(phone) {
+    margin: 0 3rem;
   }
 
   @include breakpoints(phone) {
@@ -35,12 +41,14 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    --webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+    }
 
     @include breakpoints(phone) {
       transform: translateX(-3rem) skew(0);

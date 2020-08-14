@@ -4,11 +4,18 @@ import classes from "./Footer.module.scss";
 const Footer = () => (
   <footer className={classes.Footer}>
     <div className={classes.LogoBox}>
-      <img
-        src={require("../../assets/logo-green-2x.png")}
-        alt="Full Logo"
-        className={classes.Logo}
-      />
+      <picture className={classes.Logo}>
+        <source
+          srcSet={`${require("../../assets/logo-green-small-1x.png")} 1x, 
+              ${require("../../assets/logo-green-small-2x.png")} 2x`}
+          media="(max-width: 37.5em)"
+        />
+        <img
+          srcSet={`${require("../../assets/logo-green-1x.png")} 1x, 
+              ${require("../../assets/logo-green-2x.png")} 2x`}
+          alt="Full Logo"
+        />
+      </picture>
     </div>
     <div className={classes.Row}>
       <div className={classes.Col1of2}>

@@ -30,7 +30,7 @@ const BookingModal = () => (
           suscipit cupiditate necessitatibus reprehenderit distinctio officia.
           Nisi.
         </p>
-        <button className={`${classes.Btn} ${classes.BtnGreen}`}>
+        <button className={`${classes.Btn} ${classes.BtnGreen} }`}>
           Book Now!
         </button>
       </div>
